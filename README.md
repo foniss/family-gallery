@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Family Gallery — AI-Powered Photo Gallery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A private, local photo gallery with AI face detection, automatic tagging, and a beautiful web interface for your family.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Family Viewer
+- Three-state people filter (include/exclude/neutral)
+- Multi-tag selection
+- Favorites system
+- Slideshow with speed control
+- Zoom (mouse wheel, pinch, double-tap)
+- Single & bulk download
+- Password protected
+- Mobile-friendly
 
-### `npm start`
+### Admin Panel
+- Face detection (InsightFace AI)
+- Automatic clustering of similar faces
+- Review queue for naming clusters
+- People manager (rename/merge/delete/split/avatar)
+- Category system (family/friends/custom)
+- Custom tags per batch
+- Photo rotation, archive, delete
+- Settings with AI threshold controls
+- Scan new photos with progress tracking
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Smart Organization
+- Inbox → auto-sort to photos/misc/duplicates/errors
+- Batch folders named by custom tags
+- Family-only filter (hides non-family from viewer)
+- Multiple tag support per photo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
+...auto-sort to `gallery/photos/` or `gallery/misc/`
 
-### `npm test`
+## Folder Structure
+```
+family-gallery/
+├── backend/          # Python API + AI processing
+├── gallery/          # Photo storage
+│   ├── inbox/        # Drop new photos here
+│   ├── photos/       # Processed (with faces)
+│   ├── misc/         # Processed (no faces)
+│   ├── duplicates/   # Duplicate files
+│   ├── removed/      # Deleted photos
+│   ├── archive/      # Archived photos
+│   ├── errors/       # Failed processing
+│   ├── exports/      # Downloaded albums
+│   └── videos/       # Video files
+├── data/             # App data
+│   ├── thumbnails/   # Preview images
+│   ├── face_crops/   # Detected face crops
+│   ├── avatars/      # Person avatars
+│   └── gallery.db    # SQLite database
+├── src/              # React frontend
+│   ├── admin/        # Admin panel
+│   ├── viewer/       # Family viewer
+│   ├── components/   # Shared components
+│   └── services/     # API helper
+└── public/           # Static assets
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+MIT

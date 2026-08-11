@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AdminApp from './admin/AdminApp';
+import FamilyViewer from './viewer/FamilyViewer';
+import AdminGate from './admin/AdminGate';
+import PasswordGate from './viewer/PasswordGate';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* Family Viewer with password */}
+        <Route path="/" element={
+          <PasswordGate>
+            <FamilyViewer />
+          </PasswordGate>
+        } />
+        
+        {/* Admin with different password */}
+        <Route path="/admin/*" element={
+          <AdminGate>
+            <AdminApp />
+          </AdminGate>
+        } />
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;

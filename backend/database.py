@@ -73,6 +73,7 @@ def create_tables():
             name                TEXT UNIQUE NOT NULL,
             avatar_face_id      INTEGER REFERENCES faces(id),
             photo_count         INTEGER DEFAULT 0,
+            category            TEXT DEFAULT 'family',
             created_at          TEXT DEFAULT CURRENT_TIMESTAMP
         )
     """)

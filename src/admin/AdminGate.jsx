@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Lock, Shield } from 'lucide-react';
 
-const ADMIN_PASSWORD = '123';  // Change this!
+const ADMIN_PASSWORD = 'admin123';  // Change this!
 
 export default function AdminGate({ children }) {
   const [password, setPassword] = useState('');

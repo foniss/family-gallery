@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Lock, Camera } from 'lucide-react';
 
-const FAMILY_PASSWORD = '123';  // Change this!
+const FAMILY_PASSWORD = 'chechimechi';  // Change this!
 
 export default function PasswordGate({ children }) {
   const [password, setPassword] = useState('');

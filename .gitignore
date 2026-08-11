@@ -52,3 +52,5 @@ desktop.ini
 # ── Old pages ────────────────────────────────
 src/oldpages/
 backend/config.py
+
+*.vbs

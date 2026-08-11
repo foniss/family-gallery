@@ -11,11 +11,11 @@ import os
 import time
 from pathlib import Path
 
-# ─── CONFIGURE ───────────────────────────────
-GITHUB_USERNAME = "foniss"
-REPO_NAME = "family-gallery-redirect"
-REPO_PATH = Path("D:/projects/family-gallery/family-gallery-redirect")
-PROJECT_PATH = Path("D:/projects/family-gallery")
+# ─── CONFIGURE THESE BEFORE FIRST USE ────────
+GITHUB_USERNAME = "YOUR_GITHUB_USERNAME"     # Change this
+REPO_NAME = "family-gallery-redirect"         # Change this if different
+REPO_PATH = Path("./family-gallery-redirect") # Relative path works
+PROJECT_PATH = Path(".")                      # Current directory
 API_JS_PATH = PROJECT_PATH / "src" / "services" / "api.js"
 # ─────────────────────────────────────────────
 

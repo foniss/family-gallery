@@ -30,7 +30,7 @@ DATABASE_PATH  = DATA_DIR / "gallery.db"
 SUPPORTED_FORMATS = {
     ".jpg", ".jpeg", ".png",
     ".heic", ".webp", ".bmp",
-    ".tiff", ".tif"
+    ".tiff", ".tif", ".jfif"
 }
 
 VIDEO_FORMATS = {

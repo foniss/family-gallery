@@ -2451,6 +2451,8 @@ if __name__ == "__main__":
     print("\n🚀 Family Gallery API v2.0")
     print("=" * 50)
     create_tables()
+    from database import migrate_person_category
+    migrate_person_category()
     print("✅ Database ready")
     print("✅ API: http://localhost:8000")
     print("📖 Docs: http://localhost:8000/docs")

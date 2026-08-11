@@ -478,7 +478,7 @@ def get_stats():
     conn = get_connection()
     stats = {
         'total_photos': conn.execute(
-            "SELECT COUNT(*) FROM photos WHERE processed = TRUE"
+            "SELECT COUNT(*) FROM photos WHERE processed = TRUE AND folder_type != 'removed'"
         ).fetchone()[0],
         'total_people': conn.execute(
             "SELECT COUNT(*) FROM persons"

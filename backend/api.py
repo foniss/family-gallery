@@ -137,7 +137,7 @@ def api_get_photos(
 ):
     try:
         conn = get_connection()
-        conditions = ["p.processed = TRUE"]
+        conditions = ["p.processed = TRUE", "p.folder_type != 'removed'"]
         params = []
         if family_only:
             conditions.append("""
@@ -1487,7 +1487,7 @@ def api_filter_photos(
 ):
     try:
         conn = get_connection()
-        conditions = ["p.processed = TRUE"]
+        conditions = ["p.processed = TRUE", "p.folder_type != 'removed'"]
         params = []
 
         # Person filters
@@ -1839,7 +1839,7 @@ def api_download_zip(
     try:
         conn = get_connection()
 
-        conditions = ["p.processed = TRUE"]
+        conditions = ["p.processed = TRUE", "p.folder_type != 'removed'"]
         params = []
 
         # Build same filters as /api/photos/filter

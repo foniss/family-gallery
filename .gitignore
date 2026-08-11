@@ -54,5 +54,5 @@ src/oldpages/
 backend/config.py
 
 *.vbs
-
+update_link.py
 FamilyViewer.jsx
